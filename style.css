@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  color: white;
+}
+
+/* Background */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top, #0f2027, #0b1c2d, #000814);
+  z-index: -1;
+}
+
+/* Layout */
+.main-container {
+  text-align: center;
+  padding: 40px 20px 100px;
+  min-height: 100vh;
+}
+
+.main-heading {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Mic Section */
+.mic-section {
+  margin-top: 30px;
+}
+
+.mic-btn {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: none;
+  font-size: 42px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(145deg, #d414ff, #7a00ff);
+  box-shadow: 0 0 25px rgba(186, 85, 255, 0.7);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mic-btn:hover {
+  transform: scale(1.05);
+}
+
+.mic-btn.recording {
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 20px rgba(255, 0, 150, 0.6); }
+  50% { box-shadow: 0 0 40px rgba(255, 0, 150, 1); }
+  100% { box-shadow: 0 0 20px rgba(255, 0, 150, 0.6); }
+}
+
+.tap-text {
+  margin-top: 15px;
+  color: #ccc;
+}
+
+.timer {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+/* Result Cards */
+.result-section {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.12); 
+  -webkit-backdrop-filter: blur(12px);   
+  backdrop-filter: blur(12px);           
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2); /
+}
+
+
+.card h2 {
+  margin-top: 0;
+}
+
+
+
+.feedback-card p {
+  color: #ddd;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
